@@ -12,7 +12,7 @@ Airbnb delves into a comprehensive exploration of Airbnb data. Airbnb has revolu
   4. Streamlit - (To Create Graphical user Interface)
 
 # VIEW TABLEAU 
-https://public.tableau.com/authoring/Airbnb_analysis_17019471959380/Dashboard1#3
+https://public.tableau.com/app/profile/brindha.s5974/viz/BRINDHA_airbnb/Airbnb#1
 
 # Workflow :
 Step 1 :
