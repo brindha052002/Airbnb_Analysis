@@ -11,6 +11,8 @@ Airbnb delves into a comprehensive exploration of Airbnb data. Airbnb has revolu
   3. Pymongo - (To store and retrieve the data by connecting with MongoDB Atlas)
   4. Streamlit - (To Create Graphical user Interface)
 
+# VIEW TABLEAU 
+https://public.tableau.com/authoring/Airbnb_analysis_17019471959380/Dashboard1#3
 
 # Workflow :
 Step 1 :
