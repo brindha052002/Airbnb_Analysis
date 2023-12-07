@@ -6,10 +6,10 @@ Airbnb delves into a comprehensive exploration of Airbnb data. Airbnb has revolu
 
 # Libraries/Modules needed for the project!
 
-  Plotly, Seaborn - (To plot and visualize the data)
-  Pandas - (To Clean and maipulate the data)
-  Pymongo - (To store and retrieve the data by connecting with MongoDB Atlas)
-  Streamlit - (To Create Graphical user Interface)
+  1. Plotly, Seaborn - (To plot and visualize the data)
+  2. Pandas - (To Clean and maipulate the data)
+  3. Pymongo - (To store and retrieve the data by connecting with MongoDB Atlas)
+  4. Streamlit - (To Create Graphical user Interface)
 
 
 # Workflow :
