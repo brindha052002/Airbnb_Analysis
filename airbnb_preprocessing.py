@@ -6,7 +6,7 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 from wordcloud import STOPWORDS, WordCloud
 
-client = pymongo.MongoClient("Your unique client Id")
+client = pymongo.MongoClient("paste your mongodb db connection link")
 db = client.sample_airbnb
 col = db.listingsAndReviews
 
@@ -66,6 +66,7 @@ df.isnall().sum()
 
 # Filling Total bedrooms with mode
 df.Total_bedrooms.fillna(df.Total_bedrooms.mode()[0],inplace=True)
+
 # Filling Total beds with median because data has outliers
 df.Total_beds.fillna(df.Total_beds.median(),inplace=True)
 df.Security_deposit.fillna(df.Security_deposit.median(),inplace=True)
@@ -90,44 +91,4 @@ df.reset_index(drop=True,inplace=True)
 # Converting dataframe to csv file and saving it
 df.to_csv('Airbnb_data.csv',index=False)
 
-plt.figure(figsize=(10,8))
-ax = sns.countplot(data=df,y=df.Property_type.values,order=df.Property_type.value_counts().index[:10])
-ax.set_title("Top 10 Property Types available")
-
-plt.figure(figsize=(10,8))
-ax = sns.countplot(data=df,x=df.Room_type)
-ax.set_title("Total Listings in each Room Type")
-
-# top 10 Hosts with Highest number of listings
-df.Host_name.value_counts()
-
-plt.figure(figsize=(10,8))
-ax = sns.countplot(data=df,y=df.Host_name,order=df.Host_name.value_counts().index[:10])
-ax.set_title("Top 10 Hosts with Highest number of Listings")
-
-fig = px.choropleth(data_frame=df,
-                    locations='Country_code',
-                    color='Country',
-                    locationmode='country names')
-fig.show()
-
-country_df = df.groupby('Country',as_index=False)['Price'].mean()
-
-
-fig = px.scatter(data_frame=country_df,
-           x='Country',y='Price',
-           color='Country',
-           size='Price',
-           opacity=1,
-           size_max=35,
-           title='Avg Listing Price in each Countries')
-fig.show()
-
-
-rev_df = df.groupby('Room_type',as_index=False)['Review_scores'].mean().sort_values(by='Review_scores')
-fig = px.bar(data_frame=rev_df,x='Room_type',y='Review_scores',color='Review_scores')
-fig.show()
-
-pr_df = df.groupby('Room_type',as_index=False)['Price'].mean().sort_values(by='Price')
-fig = px.bar(data_frame=pr_df,x='Room_type',y='Price',color='Price')
-fig.show()
+    
