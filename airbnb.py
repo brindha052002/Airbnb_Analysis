@@ -241,24 +241,11 @@ if selected == "Explore":
 if selected == "About":
     col1,col2 = st.columns([3,3],gap="medium")
     with col1:
-        st.write(" ")
-        st.write(" ")
-        st.write("")
-        
         st.write("**:violet[Check My GitHub]** ⬇️")
         st.write("https://github.com/brindha052002")
         st.write("**:violet[Linkedin]** ⬇️")
         st.write("https://www.linkedin.com/in/brindha-s-6740711aa/")
-        
-    with col2:
-        st.write(" ")
-        st.write(" ")
-        st.write(" ")
-        st.write(" ")
-        st.image("banner.png")     
-        
-        
-        
-        
-        
+        st.write("**:violet[Tabelu]** ⬇️")
+        st.write("https://public.tableau.com/app/profile/brindha.s5974/viz/BRINDHA_airbnb/Airbnb#1")
 
+        
